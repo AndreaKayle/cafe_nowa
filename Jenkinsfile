@@ -25,6 +25,12 @@ pipeline {
                 bat 'echo Archive step complete'
             }
         }
+	stage('Deploy') {
+    		steps {
+        echo 'Simulating deployment...'
+        sh 'echo App has been deployed!'
+    }
+}
     }
     post {
         success { echo 'Pipeline completed successfully!' }
